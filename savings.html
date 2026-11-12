@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Savings - Finova</title>
+
+<link rel="stylesheet" href="project.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+<div class="logo">
+<h2>💰 Finova</h2>
+</div>
+
+
+<div class="search-box">
+<input type="text" placeholder="Search...">
+</div>
+
+
+<div class="nav-icons">
+
+<span class="icon">🔔</span>
+<span class="icon">🌙</span>
+
+
+<div class="profile">
+
+<img src="business-avatar-profile-black-icon-man-of-user-symbol-in-trendy-flat-style-isolated-on-male-profile-people-diverse-face-for-social-network-or-web-vector.jpg">
+
+<span>Abdul</span>
+
+</div>
+
+</div>
+
+</header>
+
+
+
+
+
+<div class="container">
+
+
+<aside class="sidebar">
+
+
+<a href="dashboard.html">
+<i class="fa-solid fa-chart-line"></i>
+Dashboard
+</a>
+
+
+<a href="transaction.html">
+<i class="fa-solid fa-wallet"></i>
+Transactions
+</a>
+
+
+<a href="analytics.html">
+<i class="fa-solid fa-chart-pie"></i>
+Analytics
+</a>
+
+
+<a href="budget.html">
+<i class="fa-solid fa-bullseye"></i>
+Budget
+</a>
+
+
+<a href="savings.html" class="active">
+<i class="fa-solid fa-piggy-bank"></i>
+Savings
+</a>
+
+
+<a href="bills.html">
+<i class="fa-solid fa-calendar-days"></i>
+Bills
+</a>
+
+
+<a href="profile.html">
+<i class="fa-solid fa-user"></i>
+Profile
+</a>
+
+
+<a href="settings.html">
+<i class="fa-solid fa-gear"></i>
+Settings
+</a>
+
+
+</aside>
+
+
+
+
+
+
+<main class="content">
+
+
+<h1 class="dashboard-title">
+Savings
+</h1>
+
+
+
+
+<div class="saving-card">
+
+
+<div class="saving-icon">
+
+<i class="fa-solid fa-piggy-bank"></i>
+
+</div>
+
+
+<div>
+
+<h3>Total Savings</h3>
+
+<h2>$12,500</h2>
+
+<p>Your saved money</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="saving-section">
+
+
+<div class="section-header">
+
+<h2>Saving Goals</h2>
+
+
+<button id="addGoalBtn" type="button">
+Add Goal
+</button>
+
+
+</div>
+
+
+
+
+
+<div id="goalsList">
+
+
+<div class="goal">
+
+<div class="goal-top">
+
+<h3>New Laptop</h3>
+
+<span>$800 / $1500</span>
+
+</div>
+
+
+<div class="goal-bar">
+
+<div class="laptop-progress"></div>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</main>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="goal-popup" id="goalPopup">
+
+
+<div class="popup-box">
+
+
+<h2>Add New Goal</h2>
+
+
+<input type="text" id="goalName" placeholder="Goal Name">
+
+
+<input type="number" id="goalAmount" placeholder="Target Amount">
+
+
+<button id="createGoalBtn" type="button">
+Create Goal
+</button>
+
+
+<button id="closeGoalBtn" type="button">
+Cancel
+</button>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<script>
+
+
+const addGoalBtn = document.getElementById("addGoalBtn");
+
+const popup = document.getElementById("goalPopup");
+
+const createBtn = document.getElementById("createGoalBtn");
+
+const closeBtn = document.getElementById("closeGoalBtn");
+
+const goalsList = document.getElementById("goalsList");
+
+
+
+addGoalBtn.onclick = function(){
+
+popup.style.display = "flex";
+
+};
+
+
+
+closeBtn.onclick = function(){
+
+popup.style.display = "none";
+
+};
+
+
+
+
+
+createBtn.onclick = function(){
+
+
+let name = document.getElementById("goalName").value.trim();
+
+let amount = document.getElementById("goalAmount").value.trim();
+
+
+
+if(name === "" || amount === ""){
+
+alert("Please fill all details");
+
+return;
+
+}
+
+
+
+
+let goal = document.createElement("div");
+
+goal.className = "goal";
+
+
+
+goal.innerHTML = `
+
+<div class="goal-top">
+
+<h3>${name}</h3>
+
+<span>$0 / $${amount}</span>
+
+</div>
+
+
+<div class="goal-bar">
+
+<div class="laptop-progress"></div>
+
+</div>
+
+`;
+
+
+
+goalsList.appendChild(goal);
+
+
+
+document.getElementById("goalName").value = "";
+
+document.getElementById("goalAmount").value = "";
+
+
+
+popup.style.display = "none";
+
+
+};
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

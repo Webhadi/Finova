@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Transactions - Finova</title>
+
+<link rel="stylesheet" href="project.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <h2>💰 Finova</h2>
+    </div>
+
+
+    <div class="search-box">
+        <input type="text" placeholder="Search Transactions...">
+    </div>
+
+
+    <div class="nav-icons">
+
+        <span class="icon">🔔</span>
+
+        <span class="icon">🌙</span>
+
+
+        <div class="profile">
+
+            <img src="business-avatar-profile-black-icon-man-of-user-symbol-in-trendy-flat-style-isolated-on-male-profile-people-diverse-face-for-social-network-or-web-vector.jpg">
+
+            <span>Abdul</span>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+
+
+
+<div class="container">
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+
+<a href="dashboard.html">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<span>Dashboard</span>
+
+</a>
+
+
+
+<a href="transaction.html" class="active">
+
+<i class="fa-solid fa-wallet"></i>
+
+<span>Transactions</span>
+
+</a>
+
+
+
+<a href="analytics.html">
+
+<i class="fa-solid fa-chart-pie"></i>
+
+<span>Analytics</span>
+
+</a>
+
+
+
+<a href="budget.html">
+
+<i class="fa-solid fa-bullseye"></i>
+
+<span>Budget</span>
+
+</a>
+
+
+
+<a href="savings.html">
+
+<i class="fa-solid fa-piggy-bank"></i>
+
+<span>Savings</span>
+
+</a>
+
+
+
+<a href="bills.html">
+
+<i class="fa-solid fa-calendar-days"></i>
+
+<span>Bills</span>
+
+</a>
+
+
+
+<a href="profile.html">
+
+<i class="fa-solid fa-user"></i>
+
+<span>Profile</span>
+
+</a>
+
+
+
+<a href="settings.html">
+
+<i class="fa-solid fa-gear"></i>
+
+<span>Settings</span>
+
+</a>
+
+
+
+<a href="logout.html">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+<span>Logout</span>
+
+</a>
+
+
+
+</aside>
+
+
+
+
+
+
+
+<!-- CONTENT -->
+
+<main class="content">
+
+
+<h1 class="dashboard-title">
+All Transactions
+</h1>
+
+
+
+
+
+<div class="transactions-section" id="transactions-list">
+
+</div>
+
+
+
+
+
+</main>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<script>
+
+
+const transactions = [
+
+["Salary","+$3000","income"],
+
+["Shopping","-$150","expense"],
+
+["Food","-$50","expense"],
+
+["Freelance Payment","+$1200","income"],
+
+["Internet Bill","-$60","expense"],
+
+["Rent","-$700","expense"],
+
+["Bonus","+$500","income"],
+
+["Gaming","-$100","expense"],
+
+["Electricity Bill","-$90","expense"],
+
+["Investment","+$800","income"],
+
+["Transport","-$40","expense"],
+
+["Coffee","-$15","expense"],
+
+["Online Course","-$200","expense"],
+
+["Business Profit","+$2500","income"]
+
+];
+
+
+
+const list = document.getElementById("transactions-list");
+
+
+
+for(let i = 0; i < 100; i++){
+
+
+let item = transactions[i % transactions.length];
+
+
+
+list.innerHTML += `
+
+
+<div class="transaction">
+
+
+<div class="transaction-icon ${item[2]}-icon">
+
+<i class="fa-solid ${item[2] === "income" ? "fa-arrow-trend-up" : "fa-arrow-trend-down"}"></i>
+
+</div>
+
+
+
+<div class="transaction-info">
+
+
+<h3>${item[0]}</h3>
+
+
+<p>${i + 1} July 2026</p>
+
+
+</div>
+
+
+
+
+<strong class="${item[2] === "income" ? "plus" : "minus"}">
+
+${item[1]}
+
+</strong>
+
+
+
+</div>
+
+
+`;
+
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>

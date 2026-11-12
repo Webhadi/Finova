@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Finova Dashboard</title>
+
+    <link rel="stylesheet" href="project.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+
+    <div class="logo">
+        <h2>💰 Finova</h2>
+    </div>
+
+
+    <div class="search-box">
+
+        <input type="text" placeholder="Search...">
+
+    </div>
+
+
+
+    <div class="nav-icons">
+
+
+        <span class="icon">
+            🔔
+        </span>
+
+
+        <span class="icon">
+            🌙
+        </span>
+
+
+
+        <div class="profile">
+
+
+            <img src="business-avatar-profile-black-icon-man-of-user-symbol-in-trendy-flat-style-isolated-on-male-profile-people-diverse-face-for-social-network-or-web-vector.jpg"
+            alt="Profile">
+
+
+            <span>
+                Abdul
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</header>
+
+
+
+
+
+<!-- ================= PAGE LAYOUT ================= -->
+
+
+<div class="container">
+
+
+
+
+
+<!-- ================= SIDEBAR ================= -->
+
+
+<aside class="sidebar">
+
+
+    <a href="dashboard.html" class="active">
+
+        <i class="fa-solid fa-chart-line"></i>
+
+        <span>
+            Dashboard
+        </span>
+
+    </a>
+
+
+
+    <a href="transaction.html">
+
+        <i class="fa-solid fa-wallet"></i>
+
+        <span>
+            Transactions
+        </span>
+
+    </a>
+
+
+
+    <a href="analytics.html">
+
+        <i class="fa-solid fa-chart-pie"></i>
+
+        <span>
+            Analytics
+        </span>
+
+    </a>
+
+
+
+    <a href="budget.html">
+
+        <i class="fa-solid fa-bullseye"></i>
+
+        <span>
+            Budget
+        </span>
+
+    </a>
+
+
+
+    <a href="savings.html">
+
+        <i class="fa-solid fa-piggy-bank"></i>
+
+        <span>
+            Savings
+        </span>
+
+    </a>
+
+
+
+    <a href="bills.html">
+
+        <i class="fa-solid fa-calendar-days"></i>
+
+        <span>
+            Bills
+        </span>
+
+    </a>
+
+
+
+    <a href="profile.html">
+
+        <i class="fa-solid fa-user"></i>
+
+        <span>
+            Profile
+        </span>
+
+    </a>
+
+
+
+    <a href="settting.html">
+
+        <i class="fa-solid fa-gear"></i>
+
+        <span>
+            Settings
+        </span>
+
+    </a>
+
+
+
+    <a href="logout.html">
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+
+        <span>
+            Logout
+        </span>
+
+    </a>
+
+
+
+</aside>
+
+
+
+
+
+
+
+
+<!-- ================= CONTENT ================= -->
+
+
+<main class="content">
+
+
+<h1 class="dashboard-title">
+    Dashboard
+</h1>
+
+
+
+
+
+<!-- ================= CARDS ================= -->
+
+
+<div class="cards">
+
+
+
+    <div class="card balance">
+
+
+        <div class="card-icon">
+
+            <i class="fa-solid fa-wallet"></i>
+
+        </div>
+
+
+        <div class="card-info">
+
+            <h3>
+                Total Balance
+            </h3>
+
+            <h2>
+                $12,450
+            </h2>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="card income">
+
+
+        <div class="card-icon">
+
+            <i class="fa-solid fa-arrow-trend-up"></i>
+
+        </div>
+
+
+        <div class="card-info">
+
+
+            <h3>
+                Income
+            </h3>
+
+
+            <h2>
+                $8,000
+            </h2>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="card expense">
+
+
+        <div class="card-icon">
+
+            <i class="fa-solid fa-arrow-trend-down"></i>
+
+        </div>
+
+
+
+        <div class="card-info">
+
+
+            <h3>
+                Expenses
+            </h3>
+
+
+            <h2>
+                $3,200
+            </h2>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="card savings">
+
+
+        <div class="card-icon">
+
+            <i class="fa-solid fa-piggy-bank"></i>
+
+        </div>
+
+
+
+        <div class="card-info">
+
+
+            <h3>
+                Savings
+            </h3>
+
+
+            <h2>
+                $1,250
+            </h2>
+
+
+        </div>
+
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= BUDGET SECTION ================= -->
+
+
+<div class="budget-section">
+
+
+    <div class="budget-header">
+
+
+        <h2>
+            Monthly Budget
+        </h2>
+
+
+        <span>
+            80% Used
+        </span>
+
+
+    </div>
+
+
+
+
+    <div class="progress-bar">
+
+
+        <div class="progress"></div>
+
+
+    </div>
+
+
+
+
+
+    <div class="budget-info">
+
+
+        <p>
+            Budget:
+            <strong>$5,000</strong>
+        </p>
+
+
+
+        <p>
+            Remaining:
+            <strong>$1,000</strong>
+        </p>
+
+
+
+    </div>
+
+
+
+</div>
+
+
+
+<!-- ================= RECENT TRANSACTIONS ================= -->
+
+<div class="transactions-section">
+
+
+    <div class="section-header">
+
+        <h2>Recent Transactions</h2>
+
+        <a href="transaction.html">View All</a>
+    </div>
+
+
+
+
+    <!-- Transaction 1 -->
+
+    <div class="transaction">
+
+
+        <div class="transaction-icon income-icon">
+
+            <i class="fa-solid fa-money-bill-transfer"></i>
+
+        </div>
+
+
+        <div class="transaction-info">
+
+            <h3>Salary</h3>
+
+            <p>Today</p>
+
+        </div>
+
+
+        <strong class="plus">
+            +$3,000
+        </strong>
+
+
+    </div>
+
+
+
+
+
+
+    <!-- Transaction 2 -->
+
+    <div class="transaction">
+
+
+        <div class="transaction-icon expense-icon">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+        </div>
+
+
+        <div class="transaction-info">
+
+            <h3>Shopping</h3>
+
+            <p>Yesterday</p>
+
+        </div>
+
+
+        <strong class="minus">
+            -$150
+        </strong>
+
+
+    </div>
+
+
+
+
+
+
+    <!-- Transaction 3 -->
+
+    <div class="transaction">
+
+
+        <div class="transaction-icon expense-icon">
+
+            <i class="fa-solid fa-utensils"></i>
+
+        </div>
+
+
+        <div class="transaction-info">
+
+            <h3>Food</h3>
+
+            <p>2 days ago</p>
+
+        </div>
+
+
+        <strong class="minus">
+            -$50
+        </strong>
+
+
+    </div>
+
+
+
+
+
+
+    <!-- Transaction 4 -->
+
+    <div class="transaction">
+
+
+        <div class="transaction-icon expense-icon">
+
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+
+        </div>
+
+
+        <div class="transaction-info">
+
+            <h3>Internet Bill</h3>
+
+            <p>3 days ago</p>
+
+        </div>
+
+
+        <strong class="minus">
+            -$60
+        </strong>
+
+
+    </div>
+
+
+
+
+</div>
+
+</main>
+
+
+
+
+</div>
+
+
+
+
+
+</body>
+
+</html>
